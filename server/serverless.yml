@@ -1,0 +1,53 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: aamod1990
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: movie-library
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: movie-library
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+
+functions:
+  addMovie:
+    handler: app/handler.addMovie
+    events:
+      - httpApi:
+          path: /addMovie
+          method: post
+  getMovie:
+    handler: app/handler.getMovie
+    events:
+      - httpApi:
+          path: /getMovie/{id}
+          method: get        
+  listMovies:
+    handler: app/handler.listMovies
+    events:
+      - httpApi:
+          path: /listMovies
+          method: get
+  editMovie:
+    handler: app/handler.editMovie
+    events:
+      - httpApi:
+          path: /editMovie/{id}
+          method: put
+  deleteMovie:
+    handler: app/handler.deleteMovie
+    events:
+      - httpApi:
+          path: /deleteMovie/{id}
+          method: delete
+  searchMovie:
+    handler: app/handler.searchMovie
+    events:
+      - httpApi:
+          path: /searchMovie/{name}
+          method: get
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-typescript
+  - serverless-mocha-plugin

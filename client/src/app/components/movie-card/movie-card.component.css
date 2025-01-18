@@ -1,0 +1,59 @@
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 250px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-title {
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+}
+
+.movie-details,
+.movie-genre,
+.movie-actors,
+.movie-release-date {
+    margin: 0 0 10px 0;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-button,
+.delete-button,
+.add-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-button {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.add-button {
+    background-color: #007bff;
+    color: #ffffff;
+    margin: 20px auto;
+    display: block;
+    font-size: 16px;
+}
+b{
+    color: #007bff;
+}

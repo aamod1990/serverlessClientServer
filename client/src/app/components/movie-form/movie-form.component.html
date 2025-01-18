@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="form-container">
+    <form id="movieForm" (ngSubmit)="onSubmit()">
+      <h2>Add/Edit Movie</h2>
+      <label for="title">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="movie.name" required>
+
+      <label for="details">Details:</label>
+      <textarea id="details" name="details" [(ngModel)]="movie.details" rows="4" required></textarea>
+
+      <label for="genre">Genre:</label>
+      <input type="text" id="genre" [(ngModel)]="movie.genre" name="genre" required>
+
+      <label for="actors">Actors:</label>
+      <input type="text" id="actor" [(ngModel)]="movie.actor" name="actor" required>
+
+      <label for="releaseDate">Release Date:</label>
+      <input type="date" id="releaseDate" [(ngModel)]="movie.releaseDate" name="releaseDate" required>
+
+      <button type="submit" class="submit-button">{{ isEditMode ? 'Update' : 'Add' }} Movie</button>
+    </form>
+  </div>
+</div>

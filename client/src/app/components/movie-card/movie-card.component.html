@@ -1,0 +1,14 @@
+<div class="card-container">
+  <div class="card">
+    <h3 class="movie-title">{{ movie.name }}</h3>
+    <p class="movie-details"><b>Details:</b>{{ movie.details }}</p>
+    <p class="movie-genre"><b>Genre :</b> {{ movie.genre }}</p>
+    <p class="movie-actors"><b>Actors :</b> {{ movie.actor}}</p>
+    <p class="movie-release-date"><b>ReleaseDate :</b> {{ movie.releaseDate | date }}</p>
+    <div class="card-buttons">
+      <button class="edit-button" (click)="updateMovie(movie.movieId)">Edit</button>
+      <button class="delete-button" (click)="deleteMovie(movie.movieId)">Delete</button>
+    </div>
+  </div>
+  <!-- Repeat above card structure for more movies -->
+</div>

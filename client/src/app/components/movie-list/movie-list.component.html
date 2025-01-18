@@ -1,0 +1,9 @@
+<div class="container">
+  <app-search-bar (search)="handleSearch($event)"></app-search-bar>
+  <div class="movie-list">
+    <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+  </div>
+  <!-- <button (click)="bulkEdit()">Bulk Edit</button>
+  <button (click)="bulkDelete()">Bulk Delete</button> -->
+  <button class="add-button" (click)="addMovie()">Add Movie</button>
+</div>
